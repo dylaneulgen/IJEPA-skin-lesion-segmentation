@@ -11,4 +11,5 @@ data/
 weights/
 checkpoints/
 heatmaps/
+predictions/
 *.pt
