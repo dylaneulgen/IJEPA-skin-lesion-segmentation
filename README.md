@@ -30,11 +30,11 @@ Embeddings are computed once and reused, so training the head takes seconds rath
 
 Held-out validation images (never seen during training). Red/yellow is the model's predicted lesion probability; the green outline is the ground-truth boundary.
 
-![](predictions/ISIC_0011220_heatmap.png)
-
-![](predictions/ISIC_0010605_heatmap.png)
-
-![](predictions/ISIC_0013674_heatmap.png)
+<p align="center">
+  <img src="predictions/ISIC_0011220_heatmap.png" height="200">
+  <img src="predictions/ISIC_0010605_heatmap.png" height="200">
+  <img src="predictions/ISIC_0013674_heatmap.png" height="200">
+</p>
 
 ## Data
 
