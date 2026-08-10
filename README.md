@@ -1,12 +1,12 @@
-# JEPA Cancer Detection
+# I-JEPA Skin Lesion Segmentation
 
 Locating skin lesions in dermoscopy images by training a linear probe on top of frozen I-JEPA features.
 
 ## What is I-JEPA?
 
-I-JEPA (Image Joint-Embedding Predictive Architecture) is a self-supervised vision model from Meta. During pretraining it takes an image, hides most of it, and predicts what the hidden patches *represent* — not what they look like. That is the key difference from pixel-reconstruction models like MAE: it never tries to redraw missing pixels, only to match their embeddings, so it learns semantic structure instead of texture detail.
+I-JEPA (Image Joint-Embedding Predictive Architecture) is a self-supervised vision model. During pretraining it takes an image, hides most of it, and predicts the missing portion in latent space. This method allows it to learn the semantic structure of the image.
 
-It was trained on ImageNet with no labels at all. Here it is used frozen, purely as a feature extractor: the encoder never sees a lesion mask and is never fine-tuned.
+It was trained on ImageNet with no labels at all. Here it is used frozen, purely as a feature extractor.
 
 ## Approach
 
@@ -35,8 +35,6 @@ Held-out validation images (never seen during training). Red/yellow is the model
 ![](predictions/ISIC_0010605_heatmap.png)
 
 ![](predictions/ISIC_0013674_heatmap.png)
-
-The predicted region tracks the true boundary closely. Edges are soft and slightly blocky because predictions are made on a 16×16 patch grid and upsampled — the resolution ceiling is the patch size, not the model. Occasional faint activation appears outside the boundary on visually similar skin.
 
 ## Data
 
