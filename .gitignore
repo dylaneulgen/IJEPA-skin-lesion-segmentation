@@ -6,3 +6,9 @@ __pycache__/
 *.npz
 *.npy
 data/
+
+# generated outputs - regenerate by running the scripts, don't commit
+weights/
+checkpoints/
+heatmaps/
+*.pt
