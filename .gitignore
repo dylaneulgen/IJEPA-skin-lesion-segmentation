@@ -1,6 +1,7 @@
 .venv/
 __pycache__/
 *.pyc
+.claude/
 
 # embeddings and model caches are large - keep them out of git
 *.npz
